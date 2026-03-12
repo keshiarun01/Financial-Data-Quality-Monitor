@@ -1,0 +1,4 @@
+# Great Expectations uncommitted artifacts
+# Validation results and data docs are generated at runtime
+validations/
+data_docs/

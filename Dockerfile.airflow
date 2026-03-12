@@ -1,0 +1,41 @@
+# ============================================================
+# Dockerfile.airflow
+# Extends the official Airflow image with project dependencies.
+# Airflow + its core deps (pandas, SQLAlchemy, etc.) are
+# already in the base image — we only add what's missing.
+# ============================================================
+FROM apache/airflow:2.8.1-python3.11
+
+USER root
+
+# System dependencies for psycopg2 and scipy
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    build-essential \
+    libpq-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+USER airflow
+
+# Use Airflow's constraints file to avoid dependency conflicts.
+# This ensures any new package we install is compatible with
+# the pre-installed Airflow version.
+ARG AIRFLOW_VERSION=2.8.1
+ARG PYTHON_VERSION=3.11
+ARG CONSTRAINT_URL="https://raw.githubusercontent.com/apache/airflow/constraints-${AIRFLOW_VERSION}/constraints-${PYTHON_VERSION}.txt"
+
+COPY requirements.txt /tmp/requirements.txt
+RUN pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir \
+    --constraint "${CONSTRAINT_URL}" \
+    -r /tmp/requirements.txt
+
+# Copy source code
+COPY --chown=airflow:root src/ /opt/airflow/src/
+COPY --chown=airflow:root scripts/ /opt/airflow/scripts/
+COPY --chown=airflow:root dags/ /opt/airflow/dags/
+COPY --chown=airflow:root great_expectations/ /opt/airflow/great_expectations/
+
+# Ensure src is importable
+ENV PYTHONPATH="/opt/airflow:${PYTHONPATH}"
+
+WORKDIR /opt/airflow
