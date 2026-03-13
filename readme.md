@@ -17,12 +17,12 @@ Built to demonstrate end-to-end data engineering for quantitative asset manageme
 
 <table>
   <tr>
-    <td><img src="docs/screenshots/health_scorecard.png" alt="Health Scorecard" width="400"/><br/><em>Health Scorecard — RED/YELLOW/GREEN status per category</em></td>
-    <td><img src="docs/screenshots/anomaly_explorer.png" alt="Anomaly Explorer" width="400"/><br/><em>Anomaly Explorer — Price chart with Bollinger bands & z-score</em></td>
+    <td><img src="docs/health_scorecard.png" alt="Health Scorecard" width="400"/><br/><em>Health Scorecard — RED/YELLOW/GREEN status per category</em></td>
+    <td><img src="docs/anomaly_explorer.png" alt="Anomaly Explorer" width="400"/><br/><em>Anomaly Explorer — Price chart with Bollinger bands & z-score</em></td>
   </tr>
   <tr>
-    <td><img src="docs/screenshots/reconciliation.png" alt="Reconciliation" width="400"/><br/><em>Cross-Source Reconciliation — Yahoo vs Alpha Vantage heatmap</em></td>
-    <td><img src="docs/screenshots/ingestion_log.png" alt="Ingestion Log" width="400"/><br/><em>Ingestion Log — Pipeline history & source registry</em></td>
+    <td><img src="docs/reconciliation.png" alt="Reconciliation" width="400"/><br/><em>Cross-Source Reconciliation — Yahoo vs Alpha Vantage heatmap</em></td>
+    <td><img src="docs/ingestion_log.png" alt="Ingestion Log" width="400"/><br/><em>Ingestion Log — Pipeline history & source registry</em></td>
   </tr>
 </table>
 
