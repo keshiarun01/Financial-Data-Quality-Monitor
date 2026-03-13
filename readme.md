@@ -21,7 +21,7 @@ Built to demonstrate end-to-end data engineering for quantitative asset manageme
     <td><img src="docs/anomaly_explorer.png" alt="Anomaly Explorer" width="400"/><br/><em>Anomaly Explorer — Price chart with Bollinger bands & z-score</em></td>
   </tr>
   <tr>
-    <td><img src="docs/reconciliation.png" alt="Reconciliation" width="400"/><br/><em>Cross-Source Reconciliation — Yahoo vs Alpha Vantage heatmap</em></td>
+    <td><img src="docs/reconcillation.png" alt="Reconciliation" width="400"/><br/><em>Cross-Source Reconciliation — Yahoo vs Alpha Vantage heatmap</em></td>
     <td><img src="docs/ingestion_log.png" alt="Ingestion Log" width="400"/><br/><em>Ingestion Log — Pipeline history & source registry</em></td>
   </tr>
 </table>
