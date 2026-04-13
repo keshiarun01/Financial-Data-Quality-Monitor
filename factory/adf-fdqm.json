@@ -1,0 +1,9 @@
+{
+	"name": "adf-fdqm",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d244fc09-11ec-4b5c-ba7d-b6b393adc92c",
+		"tenantId": "907b2f13-a70d-4ff5-96cd-1774928eee13"
+	}
+}
